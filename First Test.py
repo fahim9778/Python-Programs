@@ -149,3 +149,14 @@ for friend_pizza in pizzas:
     print("My friend's favorite pizza is : " + friend_pizza)
 
 """
+# Exercise 4-13: Buffet
+buffet = ('rice', 'chicken', 'steak', 'vegetable', 'curry')     # Tuple created
+print("Original Menu :")
+for food in buffet:
+    print(food.title())     # Iterating through tuple
+
+# buffet[0] = 'noodles'     # This creates problem, No assignment in tuple
+buffet = ('noodles', 'chicken', 'steak', 'vegetable', 'pickles')    # Re-written Tuples
+print("\nModified Menu :")
+for food in buffet:
+    print(food.title())     # Iterating through tuple
