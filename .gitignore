@@ -1,0 +1,3 @@
+# ignoring PyCharm related auto-created folders
+.idea/
+venv/
