@@ -148,7 +148,7 @@ for pizza in pizzas:
 for friend_pizza in pizzas:
     print("My friend's favorite pizza is : " + friend_pizza)
 
-"""
+
 # Exercise 4-13: Buffet
 buffet = ('rice', 'chicken', 'steak', 'vegetable', 'curry')     # Tuple created
 print("Original Menu :")
@@ -160,3 +160,91 @@ buffet = ('noodles', 'chicken', 'steak', 'vegetable', 'pickles')    # Re-written
 print("\nModified Menu :")
 for food in buffet:
     print(food.title())     # Iterating through tuple
+
+"""
+
+# Exercise 5-2: More conditional test
+calling = 'MOM'
+print("Is \'MOM\' and \'mom\' are same? Let's check.")
+print(calling == 'mom')  # Uppercase & lowercase ain't same!
+print(calling.lower() == 'mom')  # Now, "MOM" turned to lowercase "mom", they're same.
+print(5 + 7 == 4 * 3)
+print(5 * 7 == 4 * 3)
+print(5 * 7 >= 4 * 3)
+print(5 * 7 <= 4 * 3)
+if (4 * 3 and 6 * 2) != 5 * 7:
+    print("Nope, Why they'll be same?")
+
+menu = ['rice', 'curry', 'vegetable']
+if 'salad' not in menu:  # Testing with "not in"
+    print("No salad today.")
+if 'curry' in menu:  # Testing with "in"
+    print("Yes, delicious curry is just coming to your plate!")
+
+# Exercise 5-3~5: Alien's color
+alien_color = ['green', 'yellow', 'red']
+point = 0
+color = 'YEllow'  # Choose any color to see the result
+if color.lower() in alien_color:
+    if color.lower() == 'green':
+        point = 5
+    elif color.lower() == 'yellow':
+        point = 10
+    elif color.lower() == 'red':
+        point = 15
+
+if point > 0:
+    print("WOW! you've earned just " + str(point) + " points!")
+else:
+    print("Sorry, guess the right color")
+
+# Exercise 5-6: Stages of life
+age = 12  # Change age to reflect changes in printing
+if age < 2:
+    print("Here's comes a baby")
+elif age < 4:
+    print("Here's comes a toddler")
+elif age < 13:
+    print("Here's comes a kid")
+elif age < 20:
+    print("Here's comes a teenager")
+elif age < 65:
+    print("Here's comes a adult")
+else:
+    print("Here's comes a elder")
+
+# Exercise 5-8: Hello Admin
+users = ['george', 'mary', 'hudson', 'admin', 'eric']
+for user in users:
+    if user == 'admin':
+        print("Hello Admin, would you like to see a status report?")
+    else:
+        print("Hello " + user.title() + ", thanks for logging back")
+
+# Exercise 5-9: No users
+special_user = []
+if special_user:
+    print("Hello Special User")
+else:
+    print("We need to find some users")
+
+# Exercise 5-10: Checking username
+current_users = ['john', 'emma', 'william']
+new_users = ['becky', 'emma', 'ethan']
+for new_user in new_users:
+    if new_user.lower() in current_users:
+        print("Username " + new_user + " already taken.")
+    else:
+        print("Username available")
+
+# Exercise 5-11: Ordinal numbers
+ordinal_numbers = [number for number in range(1, 10)]  # Creating a numeric list of 1 to 10
+for number in ordinal_numbers:
+    if number == 1:
+        print("1st")
+    elif number == 2:
+        print("2nd")
+    elif number == 3:
+        print("3rd")
+    else:
+        print(str(number) + "th")  # for every other number adding "th" as suffix.
