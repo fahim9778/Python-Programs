@@ -149,96 +149,51 @@ for friend_pizza in pizzas:
     print("My friend's favorite pizza is : " + friend_pizza)
 
 
+# Exercises from 'Python Crash Course, 2nd Edition' starts here
 # Exercise 4-13: Buffet
-buffet = ('rice', 'chicken', 'steak', 'vegetable', 'curry')     # Tuple created
-print("Original Menu :")
-for food in buffet:
-    print(food.title())     # Iterating through tuple
+buffet_menu = ('rice', 'potato', 'chicken', 'vegetables', 'fish')
+print("Original Buffet Menu :")
+for food in buffet_menu:
+    print(food)
+# buffet_menu[1] = 'papaya'
+# ERROR : 'tuple' object does not support item assignment
+buffet_menu = ('rice', 'papaya', 'chicken', 'vegetables', 'lobster')
+print("\nRevised Buffet Menu :")
+for revised_food in buffet_menu:
+    print(revised_food)
 
-# buffet[0] = 'noodles'     # This creates problem, No assignment in tuple
-buffet = ('noodles', 'chicken', 'steak', 'vegetable', 'pickles')    # Re-written Tuples
-print("\nModified Menu :")
-for food in buffet:
-    print(food.title())     # Iterating through tuple
-
-"""
-
-# Exercise 5-2: More conditional test
-calling = 'MOM'
-print("Is \'MOM\' and \'mom\' are same? Let's check.")
-print(calling == 'mom')  # Uppercase & lowercase ain't same!
-print(calling.lower() == 'mom')  # Now, "MOM" turned to lowercase "mom", they're same.
-print(5 + 7 == 4 * 3)
-print(5 * 7 == 4 * 3)
-print(5 * 7 >= 4 * 3)
-print(5 * 7 <= 4 * 3)
-if (4 * 3 and 6 * 2) != 5 * 7:
-    print("Nope, Why they'll be same?")
-
-menu = ['rice', 'curry', 'vegetable']
-if 'salad' not in menu:  # Testing with "not in"
-    print("No salad today.")
-if 'curry' in menu:  # Testing with "in"
-    print("Yes, delicious curry is just coming to your plate!")
-
-# Exercise 5-3~5: Alien's color
-alien_color = ['green', 'yellow', 'red']
-point = 0
-color = 'YEllow'  # Choose any color to see the result
-if color.lower() in alien_color:
-    if color.lower() == 'green':
-        point = 5
-    elif color.lower() == 'yellow':
-        point = 10
-    elif color.lower() == 'red':
-        point = 15
-
-if point > 0:
-    print("WOW! you've earned just " + str(point) + " points!")
-else:
-    print("Sorry, guess the right color")
-
-# Exercise 5-6: Stages of life
-age = 12  # Change age to reflect changes in printing
-if age < 2:
-    print("Here's comes a baby")
-elif age < 4:
-    print("Here's comes a toddler")
-elif age < 13:
-    print("Here's comes a kid")
-elif age < 20:
-    print("Here's comes a teenager")
-elif age < 65:
-    print("Here's comes a adult")
-else:
-    print("Here's comes a elder")
-
-# Exercise 5-8: Hello Admin
-users = ['george', 'mary', 'hudson', 'admin', 'eric']
-for user in users:
-    if user == 'admin':
-        print("Hello Admin, would you like to see a status report?")
+# Exercise 5-8. Hello Admin
+userNames = ['admin', 'bob', 'charlie', 'diana', 'elena']
+for username in userNames:
+    if username == 'admin':
+        print("Hello admin, would you like to see a status report?")
     else:
-        print("Hello " + user.title() + ", thanks for logging back")
+        print(f"Hello {username}, thank you for logging in again.")
 
-# Exercise 5-9: No users
-special_user = []
-if special_user:
-    print("Hello Special User")
+
+# Exercise 5-9. No Users
+userNames = []
+if userNames:
+    for username in userNames:
+        if username == 'admin':
+            print("Hello admin, would you like to see a status report?")
+        else:
+            print(f"Hello {username}, thank you for logging in again.")
+
 else:
-    print("We need to find some users")
+    print("We need to find some users!")
 
-# Exercise 5-10: Checking username
-current_users = ['john', 'emma', 'william']
-new_users = ['becky', 'emma', 'ethan']
-for new_user in new_users:
-    if new_user.lower() in current_users:
-        print("Username " + new_user + " already taken.")
+# Exercise 5-10: Checking Usernames
+current_users = ['adam', 'bob', 'charlie', 'diana', 'elena']
+new_users = ['pat', 'bob', 'sam', 'elena', 'tim']
+for userName in new_users:
+    if userName.lower() in current_users:
+        print(f"Sorry, Username {userName.title()} is not available")
     else:
-        print("Username available")
+        print(f"Congrats, Username {userName.title()} is available.")
 
-# Exercise 5-11: Ordinal numbers
-ordinal_numbers = [number for number in range(1, 10)]  # Creating a numeric list of 1 to 10
+# Exercise 5-11: Ordinal Numbers
+ordinal_numbers = range(1, 10)
 for number in ordinal_numbers:
     if number == 1:
         print("1st")
@@ -247,4 +202,69 @@ for number in ordinal_numbers:
     elif number == 3:
         print("3rd")
     else:
-        print(str(number) + "th")  # for every other number adding "th" as suffix.
+        print(f"{number}th")
+
+# Exercise 6-1: Person
+person = {
+    'first_name': 'Sarah',
+    'last_name': 'Patin',
+    'age': 34,
+    'city': 'Dakota'
+}
+print(person)
+
+# Exercise 6-2: Favorite Numbers
+favorite_numbers = {
+    'Adam': 7,
+    'Barbara': 10,
+    'Charlie': 11,
+    'Don': 17,
+    'Elena': 7
+}
+print(favorite_numbers)
+
+# Exercise 6-3: Five Programming Languages
+programming_languages = {
+    'C++': 'The First Language of Mine.',
+    'C' : 'I didn\'t knew I\'d to come down.',
+    'Java': 'The Second one, Lengthy but Okay.',
+    'PHP': 'Loved it, Beautiful One.',
+    'Python': 'Still Learning...'
+}
+for name, experience in programming_languages.items():
+    print(f"Language name : {name}")
+    print(f"My Experience : {experience}\n")
+
+# Exercise 6-5: Rivers
+rivers_and_countries = {
+    'nile': 'egypt',
+    'mississippi': 'america',
+    'ganges': 'india',
+    'amazon': 'brazil',
+    'zambezi': 'zimbabwe'
+}
+for river, country in sorted(rivers_and_countries.items()):
+    print(f"{river.title()} runs through {country.title()}")
+
+print("\nRiver names are:")
+for river in rivers_and_countries.keys():
+    print(f"{river.title()}")
+
+print("\nCountry names are:")
+for country in rivers_and_countries.values():
+    print(f"{country.title()}")
+
+# Exercise 6-6: Polls
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+}
+people_list = ['charlie', 'sarah', 'bob', 'peri', 'erin', 'phil']
+for name in people_list:
+    if name in favorite_languages.keys():
+        print(f"Thanks, {name.title()} for taking the poll.")
+    else:
+        print(f"Hey {name.title()}, would you please take our poll?")
+"""
