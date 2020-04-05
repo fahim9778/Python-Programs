@@ -267,4 +267,83 @@ for name in people_list:
         print(f"Thanks, {name.title()} for taking the poll.")
     else:
         print(f"Hey {name.title()}, would you please take our poll?")
+
+# Exercise 6-7: People
+person1 = {
+    'first_name': 'Sarah',
+    'last_name': 'Patin',
+    'age': 34,
+    'city': 'Dakota'
+}
+person2 = {
+    'first_name': 'John',
+    'last_name': 'Carry',
+    'age': 30,
+    'city': 'New York'
+}
+person3 = {
+    'first_name': 'Mary',
+    'last_name': 'Daisy',
+    'age': 35,
+    'city': 'Carolina'
+}
+
+people = [person1, person2, person3]
+for person in people:
+    for key, value in person.items():
+        print(f"{key} = {value}")
+    print("...")
+
+# Exercise 6-8: Pets:
+# dictionaries for pets
+pet1 = {
+    'pet_name': 'pup',
+    'animal_type': 'dog',
+    'owner_name': 'mike'
+}
+
+pet2 = {
+    'pet_name': 'mew',
+    'animal_type': 'cat',
+    'owner_name': 'sarah'
+}
+pet3 = {
+    'pet_name': 'tweety',
+    'animal_type': 'bird',
+    'owner_name': 'caron'
+}
+pet4 = {
+    'pet_name': 'ron',
+    'animal_type': 'horse',
+    'owner_name': 'charlie'
+}
+pet5 = {
+    'pet_name': 'meep',
+    'animal_type': 'sheep',
+    'owner_name': 'dalia'
+}
+
+# storing all dictionaries in a list
+pets = [pet1, pet2, pet3, pet4, pet5]
+
+# traversing thorough each dictionaries items
+for pet in pets:
+    for key, value in pet.items():
+        print(f"{key} = {value.title()}")
+    print("...")
+
+# Exercise 6-9. Favorite Places; 6-11. Cities; 6-12. Extensions are same as above (Exercise 6-8)
+# Exercise 6-10 Favorite Numbers:
+favorite_numbers = {
+    'Adam': [7, 15, 11],
+    'Barbara': [10],  # for making iterable type
+    'Charlie': [11, 19, 2],
+    'Don': [17, 20, 5, 25],
+    'Elena': [7]  # for making iterable type
+}
+for person, numbers in favorite_numbers.items():
+    print(f"\n{person}\'s favorite number(s) :")
+    for number in numbers:
+        print(f"{number}")
+print("...")
 """
