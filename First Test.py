@@ -346,4 +346,102 @@ for person, numbers in favorite_numbers.items():
     for number in numbers:
         print(f"{number}")
 print("...")
+
+# Exercise 7-1 Rental Car:
+car_name = input("Enter a car name: ")
+print(f"Let me see if I can find you a {car_name.title()}.")
+
+# Exercise 7-2 Restaurant Seating:
+number_of_people = input("How many people are in the guest list? ")
+number_of_people = int(number_of_people)
+if number_of_people > 8:
+    print(f"Sorry, you've to wait for a table.")
+else:
+    print("Welcome to the table, sir.")
+
+# Exercise 7-3 Multiples of Ten:
+number = input("Enter a number: ")
+number = int(number)
+if number % 10 == 0:
+    print(f"{number} is a multiple of 10.")
+else:
+    print(f"{number} is NOT multiple of 10.")
+
+# Exercise 7-4 Pizza Toppings:
+active = True
+while active:
+    topping = input("Enter your favorite topping names: "
+                    "Enter 'quit' to terminate prompt. :: ")
+    if topping.lower() == 'quit':
+        active = False
+        # alternatively we can use 'break' to terminate the while loop.
+    else:
+        print(f"{topping.title()}")
+
+# Exercise 7-5 Movie Tickets:
+active = True
+while active:
+    age = input("Enter your age."
+                "Enter 'quit' to terminate prompt. :: ")
+    if age.lower() == 'quit':
+        active = False
+    else:
+        age = int(age)
+        if age < 3:
+            print("Free Entry!")
+        elif 3 <= age <= 12:
+            print("Entry Fee: $10")
+        elif age > 12 :
+            print("Entry Fee: $15")
+
+# Exercise 7-6 is already done in 7-4, 7-5
+# Exercise 7-7 : Not Gonna try :p
+
+# Exercise 7-8 Deli:
+sandwich_orders = ["Grilled Cheese Sandwich", "Fish Sandwich", "Fried Egg Sandwich",
+                   "Ham Sandwich", "Ice Cream Sandwich", "Meat Ball Sandwich"]
+finished_sandwiches = []
+while sandwich_orders:
+    currently_cooking = sandwich_orders.pop()
+    print(f"Hold tight! Your {currently_cooking} is being prepared...")
+
+    finished_sandwiches.append(currently_cooking)
+    print(f"We made your {currently_cooking} sandwich. Grab NOW!\n")
+
+print("Hello folks! today we made these sandwiches : ")
+for sandwich in finished_sandwiches:
+    print(f"{sandwich}")
+
+# Exercise 7-9 No Pastrami:
+sandwich_orders = ["Grilled Cheese Sandwich", "Pastrami", "Fish Sandwich",
+                   "Fried Egg Sandwich", "Pastrami", "Ham Sandwich",
+                   "Ice Cream Sandwich", "Pastrami", "Meat Ball Sandwich"]
+print(f"Oh no! Deli has run out of Pastrami! :(\n")
+while "Pastrami" in sandwich_orders:
+    sandwich_orders.remove("Pastrami")
+
+finished_sandwiches = sandwich_orders
+print("Hello folks! today we made these sandwiches : ")
+for sandwich in finished_sandwiches:
+    print(f"{sandwich}")
+
+# Exercise 7-10 Dream Vacation:
+responses = {}
+# Set a flag to indicate that polling is active.
+polling_active = True
+while polling_active:
+    # Prompt for the person's name and response.
+    name = input("\nWhat is your name? ")
+    response = input("If you could visit one place in the world, where would you go? ")
+    # Store the response in the dictionary.
+    responses[name] = response
+    # Find out if anyone else is going to take the poll.
+    repeat = input("Would you like to let another person respond? (yes/ no) ")
+    if repeat == 'no':
+        polling_active = False
+
+# Polling is complete. Show the results.
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(f"{name} would like to visit {response}.")
 """
