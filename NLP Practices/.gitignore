@@ -1,0 +1,19 @@
+# ignore python bytecode files
+*.pyc
+*.pyo
+*.pyd
+
+# ignore vscode files
+.vscode
+
+# ignore pycharm files
+.idea
+
+# ignore .env files
+.env
+
+# ignore pytest cache
+.*cache
+
+# ignore pycache
+__pycache__
